@@ -1,0 +1,150 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  background: url('prep-meal.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  padding: 0 20px;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-content {
+  margin: 0 auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+}
+
+.welcome-section, .healthy-eating-section {
+  border: 2px solid #ddd;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.button {
+  background-color: #00a859;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Existing styles... */
+
+.hero, .video-container {
+  background: url('Foodrecepie.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* If the .hero class is not being used for the video container, you can apply the background directly to the video-container */
+.video-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px; /* Match to the size of your other containers */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the video container */
+  overflow: hidden; /* Hide overflow to respect border radius */
+}
+
+.video-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit; /* Inherit the background from the .video-container */
+  opacity: 0.5; /* Adjust opacity for desired transparency level */
+  z-index: -1; /* Ensure it's behind the video content */
+  border-radius: 10px; /* Match your container border radius */
+}
+
+.video-container video {
+  position: relative;
+  z-index: 1; /* Ensure video is above the pseudo-element */
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: if you want rounded corners for the video */
+}
+
+/* Rest of your CSS styles... */
+
+
+
+.learn-more {
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px; /* Adds some space above the button */
+}
+
+
+/* Apply the background to all container elements that should have the image */
+.container {
+  background: url('Foodreceipe.png') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0 auto;
+  max-width: 800px; /* Match to the size of your other containers */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px; /* Space below the container */
+  position: relative;
+  overflow: hidden; /* Hide overflow to respect border radius */
+}
+
+/* If you have a semi-transparent overlay or want to darken the background for better readability, you can add a pseudo-element */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity to your preference */
+  z-index: -1; /* Ensure it's behind the content */
+  border-radius: 10px; /* Match your container border radius */
+}
+
+/* Rest of your CSS styles... */
+
+/* Ensure the content is above the pseudo-element */
+.container > * {
+  position: relative;
+  z-index: 1;
+}
